@@ -12,7 +12,6 @@ public class HiloTemporizador implements Runnable {
     int seg;
     int segT;
     int aux;
-    JProgressBar pr;
 
     /**
      *
@@ -20,7 +19,7 @@ public class HiloTemporizador implements Runnable {
      * @param pr
      * @param pc
      */
-    public HiloTemporizador(int segT, JProgressBar pr, InterfazPacman pc) {
+    public HiloTemporizador(int segT, InterfazPacman pc) {
         if (segT == 0) {
             this.segT = 100;
             this.aux = 0;
@@ -28,7 +27,6 @@ public class HiloTemporizador implements Runnable {
             this.segT = segT;
             this.aux = segT;
         }
-        this.pr = pr;
         this.juego = pc;
     }
 
@@ -42,7 +40,6 @@ public class HiloTemporizador implements Runnable {
             this.seg = this.segT;
             while (this.seg >= 0) {
                 try {
-                    this.pr.setValue(this.seg);
                     if (this.aux == 0) {
                         if (this.seg % 20 == 0 && this.seg != 100) {
                             Pacman.puntaje += 50;
@@ -58,7 +55,7 @@ public class HiloTemporizador implements Runnable {
                 }
 
                 if (this.seg == 0) {
-                    Pacman.tareaTemporizador = new HiloTemporizador(100, this.pr, this.juego);
+                    Pacman.tareaTemporizador = new HiloTemporizador(100, this.juego);
                     (Pacman.hT = new Thread(Pacman.tareaTemporizador)).start();
                     break;
                 }

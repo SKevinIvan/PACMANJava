@@ -165,7 +165,7 @@ public final class Pacman {
             jf.getLblPuntaje().setText("" + puntaje);
 
             tareaPastillas = new HiloFantasmas((jf.getBprogressPastilla().getValue() * 15 / 100), (JProgressBar) jf.getBprogressPastilla());
-            tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+            tareaTemporizador = new HiloTemporizador(0, jf);
 
             hF = new Thread(tareaPastillas);
             hT = new Thread(tareaTemporizador);
@@ -333,7 +333,6 @@ public final class Pacman {
                 hT.stop();
 
             }
-            jf.getBprogress().setValue(0);
 
             if (hF.getState() == Thread.State.TIMED_WAITING) {
                 hF.stop();
@@ -376,7 +375,7 @@ public final class Pacman {
                 hiloI.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen1.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -386,7 +385,7 @@ public final class Pacman {
                 hiloA.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen1.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -396,7 +395,7 @@ public final class Pacman {
                 hiloB.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen1.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -406,7 +405,7 @@ public final class Pacman {
                 hiloD.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen1.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -427,7 +426,7 @@ public final class Pacman {
                 hiloI.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen2.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -437,7 +436,7 @@ public final class Pacman {
                 hiloD.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen2.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -447,7 +446,7 @@ public final class Pacman {
                 hiloA.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen2.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -457,7 +456,7 @@ public final class Pacman {
                 hiloB.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen2.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -477,7 +476,7 @@ public final class Pacman {
                 hiloD.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen3.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -487,7 +486,7 @@ public final class Pacman {
                 hiloA.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen3.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -497,7 +496,7 @@ public final class Pacman {
                 hiloB.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen3.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -507,7 +506,7 @@ public final class Pacman {
                 hiloI.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen3.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -527,7 +526,7 @@ public final class Pacman {
                 hiloI.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen4.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -537,7 +536,7 @@ public final class Pacman {
                 hiloD.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen4.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -547,7 +546,7 @@ public final class Pacman {
                 hiloB.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen4.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));
@@ -557,7 +556,7 @@ public final class Pacman {
                 hiloA.stop();
                 hT.stop();
 
-                tareaTemporizador = new HiloTemporizador(jf.getBprogress().getValue(), (JProgressBar) jf.getBprogress(), jf);
+                tareaTemporizador = new HiloTemporizador(0, jf);
                 hT = new Thread(tareaTemporizador);
 
                 pacmancito.setIcon(new ImageIcon(imagen4.getImage().getScaledInstance(pacmancito.getWidth(), pacmancito.getHeight(), 4)));

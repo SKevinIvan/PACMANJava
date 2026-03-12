@@ -178,6 +178,14 @@ public final class InterfazPacman extends javax.swing.JFrame {
         this.barrera2 = barrera2;
     }
 
+    public JProgressBar getBprogressPastilla() {
+        return bprogressPastilla;
+    }
+
+    public void setBprogressPastilla(JProgressBar bprogressPastilla) {
+        this.bprogressPastilla = bprogressPastilla;
+    }
+
     public JPanel getBarrera20() {
         return barrera20;
     }
@@ -560,18 +568,6 @@ public final class InterfazPacman extends javax.swing.JFrame {
 
     public void setLblVidas(JLabel lblVidas) {
         this.lblVidas = lblVidas;
-    }
-
-    public JProgressBar getBprogress() {
-        return bprogress;
-    }
-
-    public void setBprogress(JProgressBar bprogress) {
-        this.bprogress = bprogress;
-    }
-
-    public JProgressBar getBprogressPastilla() {
-        return bprogressPastilla;
     }
 
     public JLabel getLblFantasmaAmarillo() {
@@ -3250,16 +3246,14 @@ public final class InterfazPacman extends javax.swing.JFrame {
         barrera62 = new javax.swing.JPanel();
         barrera63 = new javax.swing.JPanel();
         lblPastilla248 = new javax.swing.JLabel();
-        bprogress = new javax.swing.JProgressBar();
         btnReinicio = new javax.swing.JButton();
         btnStop = new javax.swing.JButton();
         lblVidas = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         lblPuntaje = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         btnInicio = new javax.swing.JButton();
-        bprogressPastilla = new rojerusan.componentes.RSProgressCircle();
+        bprogressPastilla = new javax.swing.JProgressBar();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         menuArriba = new javax.swing.JMenuItem();
@@ -5366,12 +5360,6 @@ public final class InterfazPacman extends javax.swing.JFrame {
 
         jPanel1.add(pnlLienzo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 650));
 
-        bprogress.setBackground(new java.awt.Color(51, 51, 51));
-        bprogress.setFont(new java.awt.Font("Consolas", 1, 12)); // NOI18N
-        bprogress.setForeground(new java.awt.Color(0, 51, 153));
-        bprogress.setStringPainted(true);
-        jPanel1.add(bprogress, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 660, 240, 20));
-
         btnReinicio.setBackground(new java.awt.Color(0, 51, 102));
         btnReinicio.setFont(new java.awt.Font("Consolas", 1, 12)); // NOI18N
         btnReinicio.setForeground(new java.awt.Color(255, 255, 255));
@@ -5409,11 +5397,6 @@ public final class InterfazPacman extends javax.swing.JFrame {
         jLabel1.setText("Vidas: ");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 660, 60, 20));
 
-        jLabel3.setFont(new java.awt.Font("Consolas", 1, 11)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Recompensa en: ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 660, 110, 20));
-
         lblPuntaje.setFont(new java.awt.Font("Consolas", 1, 12)); // NOI18N
         lblPuntaje.setForeground(new java.awt.Color(204, 204, 204));
         jPanel1.add(lblPuntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 660, 60, 20));
@@ -5437,13 +5420,11 @@ public final class InterfazPacman extends javax.swing.JFrame {
         });
         jPanel1.add(btnInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 660, 70, 30));
 
-        bprogressPastilla.setForeground(new java.awt.Color(0, 0, 102));
-        bprogressPastilla.setToolTipText("");
-        bprogressPastilla.setValue(0);
-        bprogressPastilla.setBorderPainted(false);
-        bprogressPastilla.setColorText(new java.awt.Color(204, 204, 204));
-        bprogressPastilla.setFont(new java.awt.Font("Consolas", 1, 10)); // NOI18N
-        jPanel1.add(bprogressPastilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 650, 60, 40));
+        bprogressPastilla.setBackground(new java.awt.Color(51, 51, 51));
+        bprogressPastilla.setFont(new java.awt.Font("Consolas", 1, 12)); // NOI18N
+        bprogressPastilla.setForeground(new java.awt.Color(0, 51, 153));
+        bprogressPastilla.setStringPainted(true);
+        jPanel1.add(bprogressPastilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 660, 340, 20));
 
         getContentPane().add(jPanel1);
 
@@ -5633,14 +5614,12 @@ public final class InterfazPacman extends javax.swing.JFrame {
     private javax.swing.JPanel barrera7;
     private javax.swing.JPanel barrera8;
     private javax.swing.JPanel barrera9;
-    private javax.swing.JProgressBar bprogress;
-    private rojerusan.componentes.RSProgressCircle bprogressPastilla;
+    private javax.swing.JProgressBar bprogressPastilla;
     private javax.swing.JButton btnInicio;
     private javax.swing.JButton btnReinicio;
     private javax.swing.JButton btnStop;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;

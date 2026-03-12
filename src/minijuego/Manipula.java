@@ -829,7 +829,6 @@ public class Manipula {
                 fantasma4.join();
                 hT.stop();
                 hT.join();
-                jf.getBprogress().setValue(0);
             }
             if (hF.getState() == Thread.State.TIMED_WAITING) {
                 hF.stop();
@@ -875,7 +874,6 @@ public class Manipula {
                 fantasma4.join();
                 hT.stop();
                 hT.join();
-                jf.getBprogress().setValue(0);
             }
             if (hF.getState() == Thread.State.TIMED_WAITING) {
                 hF.stop();
